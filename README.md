@@ -1,7 +1,5 @@
 Laboratory 13
 
-Objective:
-
 register:
 ![image](https://github.com/user-attachments/assets/6f15ec72-b915-4798-9926-826ccdea9e2f)
 
