@@ -1,23 +1,27 @@
-@extends('layout')
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
 
-@section('title', $post->title . ' | Post')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-@section('content')
-<h1>{{ $post->title }}</h1>
-<p>{{ $post->body }}</p>
-<a href="{{ route('posts.index') }}" class="btn btn-secondary" title="Back to Posts">
-    <i class="fa-solid fa-arrow-left"></i>
-    Back to Posts</a>
-<a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary" title="Edit">
-    <i class="fas fa-edit"></i>
-    Edit
-</a>
-<form action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display:inline;">
-    @csrf
-    @method('DELETE')
-    <button type="submit" class="btn btn-outline-danger" title="Delete">
-        <i class="fas fa-trash"></i>
-        Delete
-    </button>
-</form>
-@endsection
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="card w-50">
+        <div class="card-body">
+            <h1 class="text-center">{{ $post->title }}</h1>
+            <p>{{ $post->body }}</p>
+            <a href="{{ route('posts.index') }}" class="btn btn-primary w-100">Back to Posts</a>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
